@@ -163,3 +163,5 @@ cython_debug/
 *.zipdata/
 .venv/
 .DS_Store
+/ts_*.pkl
+/*.npy
