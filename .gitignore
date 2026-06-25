@@ -165,3 +165,11 @@ cython_debug/
 .DS_Store
 /ts_*.pkl
 /*.npy
+/ts_*.pkl
+/owt_*.pkl
+/*.npy
+*.bak
+data/
+.venv/
+*.bak
+253_patient_meta.xlsx
