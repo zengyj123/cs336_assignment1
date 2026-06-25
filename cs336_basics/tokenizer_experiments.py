@@ -30,3 +30,10 @@ if __name__ == "__main__":
     pile_bytes = 825 * 1024**3                      # 825GB 换算成字节
     seconds = pile_bytes / throughput
     print(f"编码 Pile (825GB) 约需 {seconds/3600:.1f} 小时")
+    with open("data/TinyStoriesV2-GPT4-train.txt") as f:
+        ids = np.fromiter(tok.encode_iterable(f), dtype=np.uint16)
+    np.save("ts_train_ids.npy", ids)
+    print(f"训练集 token 数: {len(ids)}")
+    with open("data/TinyStoriesV2-GPT4-valid.txt") as f:
+        ids = np.fromiter(tok.encode_iterable(f), dtype=np.uint16)
+    np.save("ts_valid_ids.npy", ids)
